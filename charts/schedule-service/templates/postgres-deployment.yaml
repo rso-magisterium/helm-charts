@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "schedule-service.fullname" . }}-postgres
+  labels:
+    app: postgres
+    {{- include "schedule-service.labels" . | nindent 4 }}
+    app.kubernetes.io/name: postgres
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgres
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        {{- include "schedule-service.labels" . | nindent 8 }}
+        app.kubernetes.io/name: postgres
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: postgres
+          image: 'postgres:17'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - secretRef:
+                name: {{ include "schedule-service.fullname" . }}-postgres-secret
+          {{- if .Values.persistence.enabled -}}
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgresdata
+              {{- if .Values.persistence.subPath }}
+              subPath: {{ .Values.persistence.subPath }}
+              {{- end }}
+          {{- end -}}
+          livenessProbe:
+            exec:
+              command:
+              - "pg_isready"
+              - "-d"
+              - "$POSTGRES_DB"
+            initialDelaySeconds: 60
+            periodSeconds: 30
+      {{- if .Values.persistence.enabled -}}
+      volumes:
+        - name: postgresdata
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.existingClaim }}
+      {{- end -}}

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "classroom-service.fullname" . }}-config
+  labels:
+    {{- include "classroom-service.labels" . | nindent 4 }}
+    {{- include "classroom-service.selectorLabels" . | nindent 4 }}
+data:
+  PORT: {{ .Values.service.port | quote }}
+  PORT_GRPC: {{ .Values.service.grpcPort | quote }}
+  USER_SERVICE_URL: {{ .Values.service.userServiceUrl }}
+  SCHEDULE_SERVICE_URL_GRPC: {{ .Values.service.scheduleServiceGrpcAddress}}
