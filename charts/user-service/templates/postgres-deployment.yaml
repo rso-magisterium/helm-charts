@@ -29,14 +29,14 @@ spec:
           envFrom:
             - secretRef:
                 name: {{ include "user-service.fullname" . }}-postgres-secret
-          {{- if .Values.persistence.enabled -}}
+          {{- if .Values.persistence.enabled }}
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgresdata
+            - name: postgresdata
+              mountPath: "/var/lib/postgresql/data"
               {{- if .Values.persistence.subPath }}
               subPath: {{ .Values.persistence.subPath }}
               {{- end }}
-          {{- end -}}
+          {{- end }}
           livenessProbe:
             exec:
               command:
@@ -45,9 +45,9 @@ spec:
               - "$POSTGRES_DB"
             initialDelaySeconds: 60
             periodSeconds: 30
-      {{- if .Values.persistence.enabled -}}
+      {{- if .Values.persistence.enabled }}
       volumes:
         - name: postgresdata
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim }}
-      {{- end -}}
+      {{- end }}
