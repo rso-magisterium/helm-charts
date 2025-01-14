@@ -1,0 +1,47 @@
+apiVersion: v1
+entries:
+  classroom-service:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2025-01-14T21:09:18.523272409Z"
+    description: 'Magisterium: Classroom Service'
+    digest: 8e0288b1545f0212c0e91dfd130d39b0373b496c9ba15bc7672c9cd38b78953f
+    name: classroom-service
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/classroom-service-1.1.1/classroom-service-1.1.1.tgz
+    version: 1.1.1
+  messaging-service:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-01-14T21:09:18.6180589Z"
+    description: 'Magisterium: Messaging Service'
+    digest: 450b1369089ca986a6e315a31b8c6ede98d0a8b48b1d608758844bfaf23abc45
+    name: messaging-service
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/messaging-service-1.0.0/messaging-service-1.0.0.tgz
+    version: 1.0.0
+  schedule-service:
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-01-14T21:09:18.71408274Z"
+    description: 'Magisterium: Schedule Service'
+    digest: f1a6b18ea328bfa2f0b4648cf6a33b6c2b21f21bfe24f80f6b49376beb40de41
+    name: schedule-service
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/schedule-service-1.0.1/schedule-service-1.0.1.tgz
+    version: 1.0.1
+  user-service:
+  - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2025-01-14T21:09:18.81064811Z"
+    description: 'Magisterium: User Service'
+    digest: f150e968a3a608265bec4785a14adef987c4cce025da1628705deba20ba5fb7c
+    name: user-service
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/user-service-1.1.2/user-service-1.1.2.tgz
+    version: 1.1.2
+generated: "2025-01-14T21:09:18.810653911Z"
