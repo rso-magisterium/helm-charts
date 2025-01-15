@@ -46,6 +46,16 @@ entries:
     version: 1.0.1
   user-service:
   - apiVersion: v2
+    appVersion: 1.1.3
+    created: "2025-01-15T02:31:52.392479343Z"
+    description: 'Magisterium: User Service'
+    digest: 8f8a3fb0939d8bb20feb701d11db81a0fa67cfbd07ba6d5a9cc494aac8c1bee1
+    name: user-service
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/user-service-1.1.3/user-service-1.1.3.tgz
+    version: 1.1.3
+  - apiVersion: v2
     appVersion: 1.1.2
     created: "2025-01-14T21:09:18.81064811Z"
     description: 'Magisterium: User Service'
@@ -55,4 +65,4 @@ entries:
     urls:
     - https://github.com/rso-magisterium/helm-charts/releases/download/user-service-1.1.2/user-service-1.1.2.tgz
     version: 1.1.2
-generated: "2025-01-15T01:30:21.374079485Z"
+generated: "2025-01-15T02:31:52.392493499Z"
