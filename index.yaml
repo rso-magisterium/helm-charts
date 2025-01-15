@@ -22,6 +22,17 @@ entries:
     urls:
     - https://github.com/rso-magisterium/helm-charts/releases/download/classroom-service-1.1.1/classroom-service-1.1.1.tgz
     version: 1.1.1
+  frontend:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2025-01-15T03:23:36.562792529Z"
+    description: 'Magisterium: Frontend'
+    digest: 02a74c1ff1d0d26f1b1368d2b88fab4e87748264ebc7480e95ece3297761e712
+    name: frontend
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/frontend-0.1.0/frontend-0.1.0.tgz
+    version: 0.1.0
   messaging-service:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -65,4 +76,4 @@ entries:
     urls:
     - https://github.com/rso-magisterium/helm-charts/releases/download/user-service-1.1.2/user-service-1.1.2.tgz
     version: 1.1.2
-generated: "2025-01-15T02:31:52.392493499Z"
+generated: "2025-01-15T03:23:36.562807106Z"
