@@ -7,4 +7,5 @@ metadata:
     {{- include "messaging-service.selectorLabels" . | nindent 4 }}
 data:
   PORT: {{ .Values.service.port | quote }}
+  LOG_LEVEL: {{ default "info" .Values.service.logLevel | quote }}
   USER_SERVICE_URL: {{ .Values.service.userServiceUrl}}

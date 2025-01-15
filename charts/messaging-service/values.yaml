@@ -27,6 +27,7 @@ podLabels: {}
 # Service configuration
 service:
   port: 3000
+  logLevel: "info"
   userServiceUrl: ""  # http://<name>-user-service:<port>
 
 # Persistence configuration

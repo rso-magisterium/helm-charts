@@ -32,6 +32,7 @@ podLabels: {}
 # Service configuration
 service:
   port: 3000
+  logLevel: "info"
 
 # Persistence configuration
 persistence:

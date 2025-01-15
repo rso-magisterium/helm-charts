@@ -7,6 +7,7 @@ metadata:
     {{- include "schedule-service.selectorLabels" . | nindent 4 }}
 data:
   PORT: {{ .Values.service.port | quote }}
+  LOG_LEVEL: {{ default "info" .Values.service.logLevel | quote }}
   PORT_GRPC: {{ .Values.service.grpcPort | quote }}
   USER_SERVICE_URL: {{ .Values.service.userServiceUrl }}
   CLASSROOM_SERVICE_URL_GRPC: {{ .Values.service.classroomServiceGrpcAddress}}

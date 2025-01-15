@@ -28,6 +28,7 @@ podLabels: {}
 service:
   port: 3000
   grpcPort: 3001
+  logLevel: "info"
   userServiceUrl: ""  # http://<name>-user-service:<port>
   classroomServiceGrpcAddress: ""  # <name>-classroom-service:<gRPCport>
 
