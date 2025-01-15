@@ -7,7 +7,7 @@ metadata:
     {{- include "api-service.selectorLabels" . | nindent 4 }}
 data:
   PORT: {{ .Values.service.port | quote }}
-  API_BASE_URL_USER: {{ .Values.service.userApiBaseUrl | quote }}
-  API_BASE_URL_MESSAGING: {{ .Values.service.messagingApiBaseUrl | quote }}
-  API_BASE_URL_CLASSROOM: {{ .Values.service.classroomApiBaseUrl | quote }}
-  API_BASE_URL_SCHEDULE: {{ .Values.service.scheduleApiBaseUrl | quote }}
+  NUXT_PUBLIC_API_BASE: {{ .Values.service.userApiBaseUrl | quote }}
+  NUXT_PUBLIC_API_BASE_MESSAGING: {{ .Values.service.messagingApiBaseUrl | quote }}
+  NUXT_PUBLIC_API_BASE_CLASSROOM: {{ .Values.service.classroomApiBaseUrl | quote }}
+  NUXT_PUBLIC_API_BASE_SCHEDULE: {{ .Values.service.scheduleApiBaseUrl | quote }}
