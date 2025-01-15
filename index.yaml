@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  api-frontend:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-01-15T01:30:20.901193331Z"
+    description: 'Magisterium: API Frontend'
+    digest: 83f84f1da019f68709f4aabe0c5c31b159dfa46ca546bc415ae01cce864237a0
+    name: api-frontend
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/api-frontend-1.0.0/api-frontend-1.0.0.tgz
+    version: 1.0.0
   classroom-service:
   - apiVersion: v2
     appVersion: 1.1.1
@@ -44,4 +55,4 @@ entries:
     urls:
     - https://github.com/rso-magisterium/helm-charts/releases/download/user-service-1.1.2/user-service-1.1.2.tgz
     version: 1.1.2
-generated: "2025-01-14T21:09:18.810653911Z"
+generated: "2025-01-15T01:30:21.374079485Z"
