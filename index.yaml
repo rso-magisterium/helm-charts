@@ -24,6 +24,16 @@ entries:
     version: 1.1.1
   frontend:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2025-01-15T05:05:07.12294838Z"
+    description: 'Magisterium: Frontend'
+    digest: 948e4385320b82fe48da8579254ddf34ec9e53d168db1ebfb7f57b3802526825
+    name: frontend
+    type: application
+    urls:
+    - https://github.com/rso-magisterium/helm-charts/releases/download/frontend-0.2.0/frontend-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2025-01-15T03:41:15.568927402Z"
     description: 'Magisterium: Frontend'
@@ -86,4 +96,4 @@ entries:
     urls:
     - https://github.com/rso-magisterium/helm-charts/releases/download/user-service-1.1.2/user-service-1.1.2.tgz
     version: 1.1.2
-generated: "2025-01-15T03:41:15.568975451Z"
+generated: "2025-01-15T05:05:07.122967115Z"
